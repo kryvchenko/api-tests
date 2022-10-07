@@ -1,57 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="5.9710" tests="16" failures="2" skipped="6">
-  <testsuite name="Root Suite" timestamp="2022-09-26T18:29:27" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="5.6710" tests="16" failures="0" skipped="6">
+  <testsuite name="Root Suite" timestamp="2022-10-07T18:47:44" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="User Posts" timestamp="2022-09-26T18:29:27" tests="2" file="/Users/Tiger/Desktop/testing practise/api/test/posts.js" time="0.0000" failures="1">
-    <testcase name="User Posts /posts" time="0.3120" classname="/posts">
-      <failure message="expected { message: &apos;Authentication failed&apos; } to have deep property &apos;user_id&apos;" type="AssertionError"><![CDATA[AssertionError: expected { message: 'Authentication failed' } to have deep property 'user_id'
-    at _callee2$ (test/posts.js:31:43)
-    at tryCatch (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:86:17)
-    at Generator._invoke (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:66:24)
-    at Generator.next (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:117:21)
-    at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
-    at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:25:9)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)]]></failure>
+  <testsuite name="User Posts" timestamp="2022-10-07T18:47:44" tests="2" file="/Users/Tiger/Desktop/testing practise/api/test/posts.js" time="0.0000" failures="0">
+    <testcase name="User Posts /posts" time="0.5080" classname="/posts">
     </testcase>
-    <testcase name="User Posts GET/ posts/ :id" time="0.5950" classname="GET/ posts/ :id">
+    <testcase name="User Posts GET/ posts/ :id" time="0.4080" classname="GET/ posts/ :id">
     </testcase>
   </testsuite>
-  <testsuite name="Negative test" timestamp="2022-09-26T18:29:28" tests="2" file="/Users/Tiger/Desktop/testing practise/api/test/posts.js" time="1.4390" failures="1">
-    <testcase name="User Posts Negative test 401 Authentication Failed" time="0.7850" classname="401 Authentication Failed">
+  <testsuite name="Negative test" timestamp="2022-10-07T18:47:45" tests="2" file="/Users/Tiger/Desktop/testing practise/api/test/posts.js" time="0.6130" failures="0">
+    <testcase name="User Posts Negative test 401 Authentication Failed" time="0.2600" classname="401 Authentication Failed">
     </testcase>
-    <testcase name="User Posts Negative test 422 Validation Failed" time="0.6490" classname="422 Validation Failed">
-      <failure message="expected 401 to equal 422" type="AssertionError"><![CDATA[AssertionError: expected 401 to equal 422
-    at _callee5$ (test/posts.js:72:42)
-    at tryCatch (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:86:17)
-    at Generator._invoke (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:66:24)
-    at Generator.next (node_modules/@babel/runtime/helpers/regeneratorRuntime.js:117:21)
-    at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
-    at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:25:9)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)]]></failure>
+    <testcase name="User Posts Negative test 422 Validation Failed" time="0.3520" classname="422 Validation Failed">
     </testcase>
   </testsuite>
-  <testsuite name="Users" timestamp="2022-09-26T18:29:29" tests="0" file="/Users/Tiger/Desktop/testing practise/api/test/users-advanced.js" time="0.0000" failures="0">
+  <testsuite name="Users" timestamp="2022-10-07T18:47:46" tests="0" file="/Users/Tiger/Desktop/testing practise/api/test/users-advanced.js" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="POST" timestamp="2022-09-26T18:29:29" tests="1" file="/Users/Tiger/Desktop/testing practise/api/test/users-advanced.js" time="0.7140" failures="0">
-    <testcase name="Users POST /users" time="0.7140" classname="/users">
-    </testcase>
-  </testsuite>
-  <testsuite name="GET" timestamp="2022-09-26T18:29:30" tests="3" file="/Users/Tiger/Desktop/testing practise/api/test/users-advanced.js" time="1.5380" failures="0">
-    <testcase name="Users GET /users" time="0.5110" classname="/users">
-    </testcase>
-    <testcase name="Users GET /users/:id" time="0.2970" classname="/users/:id">
-    </testcase>
-    <testcase name="Users GET /users with query params" time="0.7280" classname="/users with query params">
+  <testsuite name="POST" timestamp="2022-10-07T18:47:46" tests="1" file="/Users/Tiger/Desktop/testing practise/api/test/users-advanced.js" time="0.4130" failures="0">
+    <testcase name="Users POST /users" time="0.4130" classname="/users">
     </testcase>
   </testsuite>
-  <testsuite name="PUT" timestamp="2022-09-26T18:29:32" tests="1" file="/Users/Tiger/Desktop/testing practise/api/test/users-advanced.js" time="0.4050" failures="0">
-    <testcase name="Users PUT /users/ :id" time="0.4050" classname="/users/ :id">
+  <testsuite name="GET" timestamp="2022-10-07T18:47:46" tests="3" file="/Users/Tiger/Desktop/testing practise/api/test/users-advanced.js" time="1.4370" failures="0">
+    <testcase name="Users GET /users" time="0.7180" classname="/users">
+    </testcase>
+    <testcase name="Users GET /users/:id" time="0.3570" classname="/users/:id">
+    </testcase>
+    <testcase name="Users GET /users with query params" time="0.3600" classname="/users with query params">
     </testcase>
   </testsuite>
-  <testsuite name="DELETE" timestamp="2022-09-26T18:29:32" tests="1" file="/Users/Tiger/Desktop/testing practise/api/test/users-advanced.js" time="0.5320" failures="0">
-    <testcase name="Users DELETE /users/ :id" time="0.5310" classname="/users/ :id">
+  <testsuite name="PUT" timestamp="2022-10-07T18:47:48" tests="1" file="/Users/Tiger/Desktop/testing practise/api/test/users-advanced.js" time="0.4080" failures="0">
+    <testcase name="Users PUT /users/ :id" time="0.4080" classname="/users/ :id">
     </testcase>
   </testsuite>
-  <testsuite name="Users" timestamp="2022-09-26T18:29:33" tests="6" file="/Users/Tiger/Desktop/testing practise/api/test/users.js" time="0.0010" failures="0">
+  <testsuite name="DELETE" timestamp="2022-10-07T18:47:48" tests="1" file="/Users/Tiger/Desktop/testing practise/api/test/users-advanced.js" time="1.1270" failures="0">
+    <testcase name="Users DELETE /users/ :id" time="1.1260" classname="/users/ :id">
+    </testcase>
+  </testsuite>
+  <testsuite name="Users" timestamp="2022-10-07T18:47:49" tests="6" file="/Users/Tiger/Desktop/testing practise/api/test/users.js" time="0.0010" failures="0">
   </testsuite>
 </testsuites>

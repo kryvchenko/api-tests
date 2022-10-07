@@ -6,7 +6,6 @@ const { faker } = require('@faker-js/faker');
 const TOKEN = process.env.USER_TOKEN;
 
 
-
 describe('User Posts', () => {
     let postId, userId;
     before(async () => {
