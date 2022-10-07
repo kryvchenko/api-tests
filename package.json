@@ -26,7 +26,9 @@
     "supertest": "^6.2.4"
   },
   "dependencies": {
+    "allure-commandline": "^2.18.1",
     "dotenv": "^16.0.2",
-    "faker": "^5.5.3"
+    "faker": "^5.5.3",
+    "newman": "^5.3.2"
   }
 }

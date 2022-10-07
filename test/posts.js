@@ -3,7 +3,6 @@ require('dotenv').config()
 import { expect } from 'chai';
 import { createRandomUserWithFaker } from "../helper/user.helper";
 const { faker } = require('@faker-js/faker');
-
 const TOKEN = process.env.USER_TOKEN;
 
 
