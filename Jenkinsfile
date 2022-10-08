@@ -27,7 +27,7 @@ pipeline {
     stages {
         stage('Git download') {
             steps {
-                git credentialsId: '4a5ef452-1ba0-47d0-874c-8dc07e263942', url: 'https://github.com/Kryvchenko/api-tests'
+                git credentialsId: '49012aa8-fa6b-46e1-81d7-4e2cc11c986a', url: 'https://github.com/Kryvchenko/api-tests'
             }
         }
         stage('Install') {
