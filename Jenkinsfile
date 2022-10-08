@@ -7,8 +7,6 @@ pipeline {
                 npm install
             }
         }
-    }
-    stages {
         stage('Run test') {
             steps {
                 npm run test
