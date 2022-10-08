@@ -25,11 +25,11 @@ pipeline {
     agent any
 
     stages {
-        // stage('Git download') {
-        //     steps {
-        //         git credentialsId: 'ce02e462-2d72-4f92-a2ac-2fce65442e18', url: 'https://github.com/Valiantsin2021/test.git'
-        //     }
-        // }
+        stage('Git download') {
+            steps {
+                git credentialsId: '4a5ef452-1ba0-47d0-874c-8dc07e263942', url: 'https://github.com/Kryvchenko/api-tests'
+            }
+        }
         stage('Install') {
             steps {
                 bat encoding: 'ASCII', returnStatus: true, script: 'npm install'
