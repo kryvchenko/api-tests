@@ -1,8 +1,6 @@
 pipeline {
-    agent any
+    agent nodejs('18.9.1') {
 
-    nodejs('18.9.1') {
-        
     stages {
         stage('Install Packages') {
           sh 'npm install'
