@@ -1,21 +1,44 @@
+// pipeline {
+//   agent any
+//   tools {nodejs "Newman"}
+//   stages {
+//     stage('preflight') {
+//       steps {
+//         sh 'node -v'
+//       }
+//     }
+//     stage('build') {
+//       steps {
+//         sh 'npm install'
+//       }
+//     }
+//     stage('test') {
+//       steps {
+//         sh 'npm run test'
+//       }
+//     }
+//   }
+// }
+
+
 pipeline {
-  agent any
-  tools {nodejs "Newman"}
-  stages {
-    stage('preflight') {
-      steps {
-        sh 'node -v'
-      }
+    agent any
+
+    stages {
+        // stage('Git download') {
+        //     steps {
+        //         git credentialsId: 'ce02e462-2d72-4f92-a2ac-2fce65442e18', url: 'https://github.com/Valiantsin2021/test.git'
+        //     }
+        // }
+        stage('Install') {
+            steps {
+                bat encoding: 'ASCII', returnStatus: true, script: 'npm install'
+            }
+        }
+        stage('Run e2e and login negative test suites with Chrome browser') {
+            steps {
+                bat encoding: 'ASCII', returnStatus: true, script: 'npm run run:github'
+            }
+        }
     }
-    stage('build') {
-      steps {
-        sh 'npm install'
-      }
-    }
-    stage('test') {
-      steps {
-        sh 'npm run test'
-      }
-    }
-  }
 }
