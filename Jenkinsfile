@@ -15,12 +15,20 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'npm install'
+        if (isUnix()) {
+                 sh 'npm install'
+            } else {
+                bat 'npm install'
+            }
       }
     }
     stage('test') {
       steps {
-        sh 'npm run test'
+        if (isUnix()) {
+                 sh 'npm run test'
+            } else {
+                bat 'npm run test'
+            }
       }
     }
   }
