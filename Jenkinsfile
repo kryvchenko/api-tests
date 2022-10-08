@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  tools {nodejs "18.9.1"}
+  tools {nodejs "18.9.0"}
   stages {
     stage('preflight') {
       steps {
