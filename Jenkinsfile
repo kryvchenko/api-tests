@@ -3,7 +3,8 @@ pipeline {
   tools {nodejs "18.10.0"}
   stages {
     stage('preflight') {
-     if (isUnix()) { 
+    script {
+        if (isUnix()) { 
         steps {
         sh 'node -v'
       }
@@ -12,9 +13,11 @@ pipeline {
         bat 'node -v'
       }
      }
+    }  
     }
     stage('build') {
-     if (isUnix()) {    
+     script {
+        if (isUnix()) {    
       steps {
         sh 'npm install'
       }
@@ -23,9 +26,11 @@ pipeline {
         bat 'npm install'
       }
      }
+     }
     }
     stage('test') {
-    if (isUnix()) { 
+    script {
+     if (isUnix()) { 
       steps {
         sh 'npm run test'
       }
@@ -34,6 +39,7 @@ pipeline {
         bat 'npm run test'
       }
     }
+   }
     }
   }
 }
