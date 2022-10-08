@@ -1,16 +1,14 @@
-pipeline {
-    agent any
+    node ('jenkins-pipeline') {
+      stage('Get latest version of code') {
+        checkout scm
+      }
 
-    stages {
-        stage('Instalation') {
-            steps {
-               sh npm install
-            }
+      container ('chrome') {
+        stage('Install Packages') {
+          sh 'npm install'
         }
-        stage('Run test') {
-            steps {
-                sh npm run test
-            }
+        stage('Run Unit Tests') {
+          sh 'npm run test'
         }
-    }
-}
+      } //end container chrome
+    } // end node
