@@ -1,6 +1,5 @@
-pipeline {
-    agent nodejs('18.9.1') {
-
+node
+{
     stages {
         stage('Install Packages') {
           sh 'npm install'
@@ -9,7 +8,8 @@ pipeline {
           sh 'npm run test'
         }
     }
-  }
 }
-        
+
+    
+     
 
