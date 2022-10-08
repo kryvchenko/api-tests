@@ -4,7 +4,13 @@ pipeline {
   stages {
     stage('preflight') {
       steps {
-        sh 'node -v'
+        script {
+            if (isUnix()) {
+                 sh 'node -v'
+            } else {
+                bat 'node -v'
+            }
+        }
       }
     }
     stage('build') {
