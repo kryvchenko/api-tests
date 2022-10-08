@@ -4,16 +4,16 @@ pipeline {
     stages {
         stage('Instalation') {
             steps {
-                script {
-                   run npm install
-                }
+                nodejs('18.9.1') {
+               npm install
+          }
             }
         }
         stage('Run test') {
             steps {
-                script {
-                   run npm run test
-                }
+                nodejs('18.9.1') {
+                npm run test
+          }
             }
         }
     }
