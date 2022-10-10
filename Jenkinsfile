@@ -29,8 +29,10 @@ pipeline {
         script {
         if (isUnix()) {
                  sh 'npm run test'
+                 archiveArtifacts artifacts: 'db.dump.sql', excludes: 'output/*.md'
             } else {
                 bat 'npm run test'
+                archiveArtifacts artifacts: 'db.dump.sql', excludes: 'output/*.md'
             }
        }
       }
